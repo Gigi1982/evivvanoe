@@ -1,0 +1,114 @@
+// main: ../bootstrap/bootstrap.less
+// out: null
+
+.artist-gallery-grid {
+    margin:0 auto;
+    .grid-item {
+        //width:410px;
+        //height:300px;
+        //float:left;
+        //margin-bottom: 10px;
+    }
+}
+
+
+
+
+// single artisti
+
+.artisti-single-content {
+    padding-top: 140px;
+    padding-bottom: 100px;
+    .single-artist-header {
+        height: 600px;
+        background-size: cover;
+        position: relative;
+        &:after {
+            content:"";
+            position: absolute;
+            top:0;
+            left:0;
+            bottom:0;
+            right: 0;
+            background:rgba(0,0,0,.2);
+        }
+    }
+    .single-artist-heading {
+        position: absolute;
+        left:50%;
+        transform: translateX(-50%);
+        bottom:50px;
+        z-index: 1;
+        .single-artist-title, .single-artist-subtitle {
+            color:#fff;
+        }
+    }
+    .artisti-content {
+        margin-top: 50px;
+        .text-block {
+            margin-top: 30px;
+        }
+    }
+    .artisti-permalink {
+        display: block;
+        margin-bottom: 20px;
+        position: relative;
+        .artist-bg {
+            background-size: cover;
+            height: 400px;
+        }
+        .artist-heading-block {
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform:translate(-50%,-50%);
+            background: rgba(255,255,255,.0);
+            opacity:0;
+            transition: background 400ms ease-in, opacity 400ms ease-in;
+            padding: 20px;
+            text-align: center;
+            color:@main-text-color;
+            .artisti-listing-title, .artisti-listing-subtitle {
+                white-space: nowrap;
+                margin:0;
+                margin-bottom: 5px;
+                padding:0;
+            }
+        }
+        &:hover {
+            .artist-heading-block {
+                background: rgba(255,255,255,.8);
+                opacity:1;
+            }
+        }
+    }
+    @media screen and (max-width:@screen-md) {
+        .artisti-permalink {
+            .artist-heading-block {
+                opacity: 1;
+                background: rgba(255,255,255,.8);
+            }
+        }
+    }
+    @media screen and (max-width:768px) {
+        padding-top: 120px;
+        .single-artist-header {
+            height:370px;
+            .single-artist-heading {
+                left: auto;
+                transform: none;
+            }
+        }
+    }
+}
+
+#lightgallery {
+    text-align: center;
+    .img-container {
+        max-height: 450px;
+        overflow: hidden;
+    }
+    .artist-single-images {
+        margin-right: 20px;
+    }
+}
