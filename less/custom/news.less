@@ -1,6 +1,10 @@
 // main: ../bootstrap/bootstrap.less
 // out: null
 
+body {
+    background:#ff00ff;
+}
+
 .news-listing {
     min-height: 100vh;
     h1 {
@@ -9,20 +13,24 @@
 }
 
 
-.news-thumb {
-    display: block;
-    position: relative;
-    &:hover {
-        .news-caption {
-            background: rgba(255,255,255,.8);
-            opacity:1;
+.news-thumb-container {
+    margin-bottom: 20px;
+    .news-thumb {
+        display: block;
+        position: relative;
+        &:hover {
+            .news-caption {
+                background: rgba(255,255,255,.8);
+                opacity:1;
+            }
+        }
+        .news-bg {
+            height:400px;
+            background-size: cover;
         }
     }
-    .news-bg {
-        height:400px;
-        background-size: cover;
-    }
 }
+
 .news-caption {
     position: absolute;
     top:50%;
