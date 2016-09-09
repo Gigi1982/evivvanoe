@@ -17,7 +17,7 @@
     position: relative;
     &:after {
         content:"";
-        background:rgba(0,0,0,.3);
+        
         position: absolute;
         left: 0;
         top:0;
@@ -25,16 +25,12 @@
         right:0;
         transition: background 400ms ease-in;
     }
-    &:hover {
-        &:after {
-            content:"";
-            background:rgba(0,0,0,.6);
-        }
-    }
+    
     .events-caption {
         position: absolute;
-        bottom:44px;
-        left:50px;
+        bottom: 50px;
+        right: 0;
+        left: 0;
         //background:rgba(136,74,147,.7);
         width: 400px;
         min-height: 112px;
@@ -45,25 +41,19 @@
             color:#fff;
         }
     }
-    @media screen and (max-width:@screen-md) {
+    @media screen and (min-width:1025px) {
+        .events-caption {
+            bottom:44px;
+            left:50px;
+        }
         &:after {
-            content:"";
             background:rgba(0,0,0,.3);
-            position: absolute;
-            transition: none;
         }
         &:hover {
             &:after {
                 content:"";
-                display: none;
+                background:rgba(0,0,0,.6);
             }
-        }
-    }
-    @media screen and (max-width:768px) {
-        .events-caption {
-            bottom: 50px;
-            right: 0;
-            left: 0;
         }
     }
 }
@@ -84,20 +74,14 @@
         position: relative;
         &:after {
             content: "";
-            background:rgba(0,0,0,.3);
             position: absolute;
             left:0;
             top:0;
             right:0;
             bottom:0;
-            transition: background 400ms ease-in-out;
+            
         }
-        &:hover {
-            &:after {
-                content: "";
-                background:rgba(0,0,0,.6);
-            }
-        }
+        
         .artist-listing-content {
             position: absolute;
             bottom:80px;
@@ -121,6 +105,20 @@
     .artist-header {
         background-size: cover;
         height:100vh;
+    }
+    @media screen and (min-width:1025px) {
+        .artist-container {
+            &:after {
+                background:rgba(0,0,0,.3);
+                transition: background 400ms ease-in-out;
+            }
+            &:hover {
+                &:after {
+                    content: "";
+                    background:rgba(0,0,0,.6);
+                }
+            }
+        }
     }
 }
 

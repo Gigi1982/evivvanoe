@@ -19,6 +19,9 @@
 .artisti-single-content {
     padding-top: 140px;
     padding-bottom: 100px;
+    .artist-listing {
+        padding-top: 30px;
+    }
     .single-artist-header {
         height: 600px;
         background-size: cover;
@@ -107,8 +110,12 @@
     .img-container {
         max-height: 450px;
         overflow: hidden;
+        @media screen and (min-width:1025px) {
+            min-height: 500px;
+        }
     }
     .artist-single-images {
         margin-right: 20px;
     }
+    
 }

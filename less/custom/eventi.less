@@ -4,6 +4,9 @@
 .eventi-single-content {
     padding-top: 140px;
     padding-bottom: 100px;
+    .eventi-listing {
+        padding-top:30px;
+    }
     .eventi-permalink {
         display: block;
         margin-bottom: 20px;
@@ -16,9 +19,7 @@
             top:50%;
             left: 50%;
             transform:translate(-50%,-50%);
-            background: rgba(255,255,255,.0);
-            opacity:0;
-            transition: background 400ms ease-in, opacity 400ms ease-in;
+            background: rgba(255,255,255,.8);
             padding: 20px;
             text-align: center;
             color:@main-text-color;
@@ -31,16 +32,29 @@
         }
         &:hover {
             .eventi-heading-block {
-                background: rgba(255,255,255,.8);
-                opacity:1;
+                //background: rgba(255,255,255,.8);
+                //opacity:1;
+            }
+        }
+        @media screen and (min-width:1025px) {
+            .eventi-heading-block {
+                background: rgba(255,255,255,.0);
+                opacity:0;
+                transition: background 400ms ease-in, opacity 400ms ease-in;
+            }
+            &:hover {
+            .eventi-heading-block {
+                    background: rgba(255,255,255,.8);
+                    opacity:1;
+                }
             }
         }
     }
     @media screen and (max-width:@screen-md) {
         .eventi-permalink {
             .eventi-heading-block {
-                background: rgba(255,255,255,.8);
-                opacity:1;
+                //background: rgba(255,255,255,.8);
+                //opacity:1;
             }
         }
     }

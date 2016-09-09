@@ -4,6 +4,7 @@
 		<section class="eventi-single-content">
             <!-- artisti listing content-->
             <div class="container">
+                <h1 class="single-content-title"><?php the_title(); ?></h1>
                 <div class="eventi-listing">
                     <div class="row">
                     <?php 

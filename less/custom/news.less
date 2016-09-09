@@ -14,38 +14,43 @@
     .news-thumb {
         display: block;
         position: relative;
-        &:hover {
-            .news-caption {
-                background: rgba(255,255,255,.8);
-                opacity:1;
+        .news-caption {
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform:translate(-50%,-50%);
+            padding: 20px;
+            text-align: center;
+            background: rgba(255,255,255,.8);
+            color:@main-text-color;
+            .artisti-listing-title, .artisti-listing-subtitle {
+                white-space: nowrap;
+                margin:0;
+                margin-bottom: 5px;
+                padding:0;
             }
         }
+        
         .news-bg {
             height:400px;
             background-size: cover;
         }
+        @media screen and (min-width:1025px) {
+            .news-caption {
+                background: rgba(255,255,255,.0);
+                opacity:0;
+                transition: background 400ms ease-in, opacity 400ms ease-in;
+                &:hover {
+                    background: rgba(255,255,255,.8);
+                    opacity:1;
+                }
+            }
+            
+        }
     }
 }
 
-.news-caption {
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform:translate(-50%,-50%);
-    background: rgba(255,255,255,.0);
-    opacity:0;
-    transition: background 400ms ease-in, opacity 400ms ease-in;
-    padding: 20px;
-    text-align: center;
-    color:@main-text-color;
-    .artisti-listing-title, .artisti-listing-subtitle {
-        white-space: nowrap;
-        margin:0;
-        margin-bottom: 5px;
-        padding:0;
-        }
-    
-}
+
 
 .news-img-container {
     > img {
@@ -65,5 +70,5 @@
 
 .img-container {
     position: relative;
-    min-height: 500px;
+    //min-height: 500px;
 }

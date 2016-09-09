@@ -4233,7 +4233,6 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .events-bg:after {
   content: "";
-  background: rgba(0, 0, 0, 0.3);
   position: absolute;
   left: 0;
   top: 0;
@@ -4241,14 +4240,11 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   right: 0;
   transition: background 400ms ease-in;
 }
-.events-bg:hover:after {
-  content: "";
-  background: rgba(0, 0, 0, 0.6);
-}
 .events-bg .events-caption {
   position: absolute;
-  bottom: 44px;
-  left: 50px;
+  bottom: 50px;
+  right: 0;
+  left: 0;
   width: 400px;
   min-height: 112px;
   padding: 20px;
@@ -4259,23 +4255,17 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .events-bg .events-caption .artist-subtitle {
   color: #fff;
 }
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 1025px) {
+  .events-bg .events-caption {
+    bottom: 44px;
+    left: 50px;
+  }
   .events-bg:after {
-    content: "";
     background: rgba(0, 0, 0, 0.3);
-    position: absolute;
-    transition: none;
   }
   .events-bg:hover:after {
     content: "";
-    display: none;
-  }
-}
-@media screen and (max-width: 768px) {
-  .events-bg .events-caption {
-    bottom: 50px;
-    right: 0;
-    left: 0;
+    background: rgba(0, 0, 0, 0.6);
   }
 }
 .video-showcase-text {
@@ -4293,17 +4283,11 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .artist-home-listing .artist-container:after {
   content: "";
-  background: rgba(0, 0, 0, 0.3);
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
-  transition: background 400ms ease-in-out;
-}
-.artist-home-listing .artist-container:hover:after {
-  content: "";
-  background: rgba(0, 0, 0, 0.6);
 }
 .artist-home-listing .artist-container .artist-listing-content {
   position: absolute;
@@ -4326,6 +4310,16 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .artist-home-listing .artist-header {
   background-size: cover;
   height: 100vh;
+}
+@media screen and (min-width: 1025px) {
+  .artist-home-listing .artist-container:after {
+    background: rgba(0, 0, 0, 0.3);
+    transition: background 400ms ease-in-out;
+  }
+  .artist-home-listing .artist-container:hover:after {
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+  }
 }
 .embed-video-bg {
   position: absolute;
@@ -4587,7 +4581,7 @@ h6 {
   padding-top: 128px;
 }
 .normal-page-content {
-  padding-top: 100px;
+  padding-top: 140px;
   padding-bottom: 50px;
 }
 .normal-page-content .single-text-content {
@@ -4620,7 +4614,7 @@ h6 {
 }
 @media screen and (max-width: 768px) {
   .normal-page-content {
-    padding-top: 80px;
+    padding-top: 120px;
   }
   .normal-page-content .content-header {
     height: 370px;
@@ -6335,6 +6329,9 @@ html.fp-enabled,
   padding-top: 140px;
   padding-bottom: 100px;
 }
+.artisti-single-content .artist-listing {
+  padding-top: 30px;
+}
 .artisti-single-content .single-artist-header {
   height: 600px;
   background-size: cover;
@@ -6423,12 +6420,20 @@ html.fp-enabled,
   max-height: 450px;
   overflow: hidden;
 }
+@media screen and (min-width: 1025px) {
+  #lightgallery .img-container {
+    min-height: 500px;
+  }
+}
 #lightgallery .artist-single-images {
   margin-right: 20px;
 }
 .eventi-single-content {
   padding-top: 140px;
   padding-bottom: 100px;
+}
+.eventi-single-content .eventi-listing {
+  padding-top: 30px;
 }
 .eventi-single-content .eventi-permalink {
   display: block;
@@ -6443,9 +6448,7 @@ html.fp-enabled,
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0);
-  opacity: 0;
-  transition: background 400ms ease-in, opacity 400ms ease-in;
+  background: rgba(255, 255, 255, 0.8);
   padding: 20px;
   text-align: center;
   color: #333333;
@@ -6457,12 +6460,13 @@ html.fp-enabled,
   margin-bottom: 5px;
   padding: 0;
 }
-.eventi-single-content .eventi-permalink:hover .eventi-heading-block {
-  background: rgba(255, 255, 255, 0.8);
-  opacity: 1;
-}
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 1025px) {
   .eventi-single-content .eventi-permalink .eventi-heading-block {
+    background: rgba(255, 255, 255, 0);
+    opacity: 0;
+    transition: background 400ms ease-in, opacity 400ms ease-in;
+  }
+  .eventi-single-content .eventi-permalink:hover .eventi-heading-block {
     background: rgba(255, 255, 255, 0.8);
     opacity: 1;
   }
@@ -6485,32 +6489,37 @@ html.fp-enabled,
   display: block;
   position: relative;
 }
-.news-thumb-container .news-thumb:hover .news-caption {
+.news-thumb-container .news-thumb .news-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  text-align: center;
   background: rgba(255, 255, 255, 0.8);
-  opacity: 1;
+  color: #333333;
+}
+.news-thumb-container .news-thumb .news-caption .artisti-listing-title,
+.news-thumb-container .news-thumb .news-caption .artisti-listing-subtitle {
+  white-space: nowrap;
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
 }
 .news-thumb-container .news-thumb .news-bg {
   height: 400px;
   background-size: cover;
 }
-.news-caption {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0);
-  opacity: 0;
-  transition: background 400ms ease-in, opacity 400ms ease-in;
-  padding: 20px;
-  text-align: center;
-  color: #333333;
-}
-.news-caption .artisti-listing-title,
-.news-caption .artisti-listing-subtitle {
-  white-space: nowrap;
-  margin: 0;
-  margin-bottom: 5px;
-  padding: 0;
+@media screen and (min-width: 1025px) {
+  .news-thumb-container .news-thumb .news-caption {
+    background: rgba(255, 255, 255, 0);
+    opacity: 0;
+    transition: background 400ms ease-in, opacity 400ms ease-in;
+  }
+  .news-thumb-container .news-thumb .news-caption:hover {
+    background: rgba(255, 255, 255, 0.8);
+    opacity: 1;
+  }
 }
 .news-img-container > img {
   text-align: center;
@@ -6526,7 +6535,6 @@ html.fp-enabled,
 }
 .img-container {
   position: relative;
-  min-height: 500px;
 }
 @font-face {
   font-family: 'fontello';
