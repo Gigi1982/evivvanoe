@@ -6472,9 +6472,6 @@ html.fp-enabled,
     padding-top: 120px;
   }
 }
-body {
-  background: #ff00ff;
-}
 .news-listing {
   min-height: 100vh;
 }
@@ -6521,6 +6518,11 @@ body {
 }
 .single-news-container {
   margin-top: 50px;
+}
+.single-news-container .news-single-images {
+  display: block;
+  margin-bottom: 20px;
+  max-height: 420px;
 }
 .img-container {
   position: relative;
