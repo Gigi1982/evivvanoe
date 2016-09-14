@@ -1,8 +1,13 @@
 <?php /* Template Name: contatti */ get_header(); ?>
 
 	<!-- section -->
-<section class="normal-page-content">
-    
+<section class="normal-page-content contatti-content">
+    <div class="section map-section">
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzG7V3f5KJfLgbX-rNayJqNraNztA7OXI&libraries=visualization&callback=initMap">
+    </script>
+    <div id="map"></div>
+    </div>
     <div class="container">
         <header class="without-bg">
             <div class="row">

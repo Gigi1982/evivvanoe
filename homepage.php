@@ -21,6 +21,7 @@
                     </div>
                 </div>
                 <div class="section slide2-artist-listing">
+                    <div class="home-slide-titles"><h1 class="artist-title">ARTISTI</h1></div>
                     <ul class="artist-home-listing">
                     <?php 
 
@@ -56,6 +57,7 @@
                     </ul>
                 </div>
                 <div class="section events">
+                    <div class="home-slide-titles"><h1 class="artist-title">EVENTI</h1></div>
                     <ul class="events-slider">
                     <?php 
 
@@ -90,7 +92,7 @@
                     <?php endwhile;?>
                     </ul>
                 </div>
-                <div class="section map-section">
+                <!--<div class="section map-section">
                     <script async defer
                         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzG7V3f5KJfLgbX-rNayJqNraNztA7OXI&libraries=visualization&callback=initMap">
                     </script>
@@ -108,7 +110,7 @@ e-mail: evvivanoe@evvivanoe.it</p><h6>ORARI</h6><p>Apertura: dal martedì al sab
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                     <div class="button-container hidden-sm hidden-xs"><button class="btn btn-primary btn-lg show-hide-map" href="#"><i class="glyphicon glyphicon-eye-open"></i></button></div>
                 </div>
             </div>

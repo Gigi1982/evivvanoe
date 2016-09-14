@@ -12,7 +12,7 @@
     position: fixed;
     bottom:30px;
     left:50%;
-    transform: translate(0,-50%);
+    margin-left: -9px;
     z-index: 2;
     text-align: center;
     .scroll-down {
@@ -66,7 +66,7 @@
 }
 
 .normal-page-content {
-    padding-top: 140px;
+    padding-top: 100px;
     padding-bottom: 50px;
     .single-text-content {
         margin-top: 50px;
@@ -96,7 +96,7 @@
         }
     }
     @media screen and (max-width:768px) {
-        padding-top: 120px;
+        padding-top: 78px;
         .content-header {
             height:370px;
             .single-content-heading {
@@ -303,12 +303,6 @@
     }
 }
 
-#map {
-    width:100vw;
-    height: 100vh;
-    position: absolute;
-}
-
 .home {
     .footer {
         position: absolute;
@@ -345,7 +339,7 @@
 }
 
 
-.fp-viewing-fourth {
+.fp-viewing-third {
     .footer {
         opacity: 1;
     }
@@ -414,6 +408,16 @@
                 margin-left: 0;
                 margin-right: 0;   
             }
+        }
+    }
+}
+
+.contatti-content {
+    #map {
+        width:100vw;
+        height: 300px;
+        @media screen and (min-width:667px) {
+            height: 600px;
         }
     }
 }

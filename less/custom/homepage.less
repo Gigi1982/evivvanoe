@@ -17,7 +17,6 @@
     position: relative;
     &:after {
         content:"";
-        
         position: absolute;
         left: 0;
         top:0;
@@ -25,14 +24,12 @@
         right:0;
         transition: background 400ms ease-in;
     }
-    
     .events-caption {
         position: absolute;
-        bottom: 50px;
+        bottom: 80px;
         right: 0;
         left: 0;
         //background:rgba(136,74,147,.7);
-        width: 400px;
         min-height: 112px;
         padding: 20px;
         color:#fff;
@@ -43,7 +40,7 @@
     }
     @media screen and (min-width:1025px) {
         .events-caption {
-            bottom:44px;
+            bottom: 100px;
             left:50px;
         }
         &:after {
@@ -134,7 +131,6 @@
     z-index: -100;
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    background: url(polina.jpg) no-repeat;
     background-size: cover;
 }
 
@@ -183,4 +179,10 @@
         }
         
     }
+}
+
+.home-slide-titles {
+    position: absolute;
+    top:100px;
+    right:30px;
 }
