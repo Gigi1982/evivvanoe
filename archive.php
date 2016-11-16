@@ -9,7 +9,7 @@
 			<?php get_template_part('loop'); ?>
 
 			<?php get_template_part('pagination'); ?>
-            xxxx
+
 		</section>
 		<!-- /section -->
 	</main>
