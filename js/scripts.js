@@ -22,6 +22,14 @@
             ]
         });
         
+        $('.news-home-listing').lightSlider({
+            adaptiveHeight:false,
+            item:1,
+            pager:false,
+            slideMargin:0,
+            loop:true
+        });
+        
         $('.events-slider').lightSlider({
             adaptiveHeight:false,
             item:1,

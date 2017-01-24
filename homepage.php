@@ -8,7 +8,7 @@
             </aside>
             <div id="fullpage">
                 <div class="section slide1-kaleido">
-                    <div class="full-page-bg visible-sm visible-xs"></div>
+                    <!--<div class="full-page-bg visible-sm visible-xs"></div>
                     <video class="embed-video-bg hidden-sm hidden-xs" autoplay loop muted>
                       <source src="<?php echo get_template_directory_uri(); ?>/img/caleido.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -18,10 +18,30 @@
                             <h1 class="big-showcase-title">EVVIVANOè WITH KALEIDOSCOPE EYES.</h1>
                             <h2 class="big-showcase-subtitle theano">one story, many stories. </h2>
                         </div>
-                    </div>
+                    </div>-->
+                    <ul class="news-home-listing">
+                    <?php $the_query = new WP_Query( 'posts_per_page=10' ); ?>
+                    <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
+                        <?php $featuredThumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large'); ?>
+                        <li class="news-home-articles">
+                            <?php echo'<a class="news-thumb" style="background-image:url('.$featuredThumb[0].')" href="'.get_permalink().'">' ?>
+                                <div class="news-home-caption">
+                                    <?php the_title();
+
+                                    ?>
+                                </div> 
+                            </a>
+                            <?php the_excerpt(__('(more…)')); ?>
+                        </li>
+                    <?php 
+                    endwhile;
+                    wp_reset_postdata();
+                    ?>
+                    </ul>
+
                 </div>
                 <div class="section slide2-artist-listing">
-                    <div class="home-slide-titles"><h1 class="artist-title">ARTISTI</h1></div>
+                    <div class="home-slide-titles"><h1 class="artist-title"><?php echo pll_e('ARTISTI');?></h1></div>
                     <ul class="artist-home-listing">
                     <?php 
 
