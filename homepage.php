@@ -41,7 +41,7 @@
 
                 </div>
                 <div class="section slide2-artist-listing">
-                    <div class="home-slide-titles"><h1 class="artist-title"><?php echo pll_e('ARTISTI');?></h1></div>
+                    <div class="home-slide-titles"><h1 class="artist-title"><?php// echo pll_e('ARTISTI'); ?></h1></div>
                     <ul class="artist-home-listing">
                     <?php 
 

@@ -5,9 +5,9 @@
             <div class="single-content-heading">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-4"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/ema.jpg"></img></div>
-                        <div class="col-md-4"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/Sara.jpg"></img></div>
-                        <div class="col-md-4"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/paolo.jpg"></img></div>
+                        <div class="col-md-4"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/ema.jpg"></div>
+                        <div class="col-md-4"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/Sara.jpg"></div>
+                        <div class="col-md-4"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/paolo.jpg"></div>
                     </div>
                     <h1 class="single-content-title"><?php the_title(); ?></h1>
                     <h2 class="single-content-subtitle theano"><?php the_field('sottotitolo_header'); ?></h2>
