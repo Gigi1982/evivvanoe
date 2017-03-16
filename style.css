@@ -4242,10 +4242,9 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .events-bg .events-caption {
   position: absolute;
-  bottom: 50px;
+  bottom: 80px;
   right: 0;
   left: 0;
-  width: 400px;
   min-height: 112px;
   padding: 20px;
   color: #fff;
@@ -4257,7 +4256,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 @media screen and (min-width: 1025px) {
   .events-bg .events-caption {
-    bottom: 44px;
+    bottom: 100px;
     left: 50px;
   }
   .events-bg:after {
@@ -4277,6 +4276,17 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .video-showcase-text h2 {
   margin-top: 0;
+}
+.news-home-listing .news-thumb {
+  display: block;
+  position: relative;
+  background-size: cover;
+  height: 100vh;
+}
+.news-home-listing .news-thumb .news-home-caption {
+  position: absolute;
+  bottom: 80px;
+  right: 100px;
 }
 .artist-home-listing .artist-container {
   position: relative;
@@ -4333,7 +4343,6 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: url(polina.jpg) no-repeat;
   background-size: cover;
 }
 .map-section {
@@ -4379,6 +4388,11 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
     padding: 5px 20px;
   }
 }
+.home-slide-titles {
+  position: absolute;
+  top: 100px;
+  right: 30px;
+}
 @font-face {
   font-family: 'theano_modernregular';
   src: url('fonts/theanomodern-regular-webfont.eot');
@@ -4421,7 +4435,7 @@ h1 {
   font-size: 32px;
 }
 h1.artist-title {
-  font-size: 36px;
+  font-size: 26px;
   text-transform: uppercase;
 }
 @media screen and (min-width: 768px) {
@@ -4534,7 +4548,7 @@ h6 {
   position: fixed;
   bottom: 30px;
   left: 50%;
-  transform: translate(0, -50%);
+  margin-left: -9px;
   z-index: 2;
   text-align: center;
 }
@@ -4581,7 +4595,7 @@ h6 {
   padding-top: 128px;
 }
 .normal-page-content {
-  padding-top: 140px;
+  padding-top: 100px;
   padding-bottom: 50px;
 }
 .normal-page-content .single-text-content {
@@ -4589,6 +4603,7 @@ h6 {
 }
 .normal-page-content .content-header {
   background-size: cover;
+  background-position: center center;
   height: 600px;
   position: relative;
 }
@@ -4614,7 +4629,7 @@ h6 {
 }
 @media screen and (max-width: 768px) {
   .normal-page-content {
-    padding-top: 120px;
+    padding-top: 78px;
   }
   .normal-page-content .content-header {
     height: 370px;
@@ -4796,11 +4811,6 @@ h6 {
   position: absolute;
   background: #333333;
 }
-#map {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-}
 .home .footer {
   position: absolute;
   bottom: 0;
@@ -4831,10 +4841,10 @@ h6 {
 .normal-page-content.no-padding-top {
   padding-top: 100px;
 }
-.fp-viewing-fourth .footer {
+.fp-viewing-third .footer {
   opacity: 1;
 }
-.fp-viewing-fourth .scroll-icons {
+.fp-viewing-third .scroll-icons {
   display: none;
 }
 .wpcf7-submit {
@@ -4893,6 +4903,15 @@ h6 {
 .social-share-links a .big:before {
   margin-left: 0;
   margin-right: 0;
+}
+.contatti-content #map {
+  width: 100vw;
+  height: 300px;
+}
+@media screen and (min-width: 667px) {
+  .contatti-content #map {
+    height: 600px;
+  }
 }
 /*! lightslider - v1.1.3 - 2015-04-14
 * https://github.com/sachinchoolur/lightslider
@@ -6335,6 +6354,7 @@ html.fp-enabled,
 .artisti-single-content .single-artist-header {
   height: 600px;
   background-size: cover;
+  background-position: center center;
   position: relative;
 }
 .artisti-single-content .single-artist-header:after {
@@ -6531,7 +6551,7 @@ html.fp-enabled,
 .single-news-container .news-single-images {
   display: block;
   margin-bottom: 20px;
-  max-height: 420px;
+  max-height: 558px;
 }
 .img-container {
   position: relative;
