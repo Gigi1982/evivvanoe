@@ -6,7 +6,7 @@
             <aside class="scroll-icons">
                 <a class="scroll-down" href="#"><i class="glyphicon glyphicon-menu-down"></i></a>
             </aside>
-            <div id="fullpage">
+            <div class="container-fluid">
                 <div class="section slide1-kaleido">
                     <!--<div class="full-page-bg visible-sm visible-xs"></div>
                     <video class="embed-video-bg hidden-sm hidden-xs" autoplay loop muted>

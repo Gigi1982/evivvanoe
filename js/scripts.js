@@ -38,10 +38,10 @@
             loop:true
         });
         
-        $('#fullpage').fullpage({
+        /*$('#fullpage').fullpage({
             verticalCentered: false,
             anchors:['first', 'second', 'third' , 'fourth']
-        });
+        });*/
         
         $('.scroll-down').click(function(){
             $.fn.fullpage.moveSectionDown();
