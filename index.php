@@ -7,14 +7,16 @@
 			     <h1 class="single-content-title"><?php _e( 'Latest Posts', 'html5blank' ); ?></h1>
 
                     <div class="row">
-                    <?php $featuredThumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' ); ?>
-                    <?php $url = $featuredThumb['0']; ?>
-                    <?php // Display blog posts on any page @ http://m0n.co/l
+                    <?php 
+                    
                     $temp = $wp_query; $wp_query= null;
-                    $wp_query = new WP_Query(); $wp_query->query('showposts=5' . '&paged='.$paged);
+                    $wp_query = new WP_Query(); $wp_query->query('showposts=10' . '&paged='.$paged);
                     $category = get_the_category();
                     while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
-                        <?php echo 
+                        <?php 
+                        $featuredThumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
+                        $url = $featuredThumb['0'];
+                        echo 
                             '<div class="col-md-6 news-thumb-container">
                                 <a href="'.get_permalink().'" class="news-thumb">
 
