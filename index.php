@@ -10,7 +10,7 @@
                     <?php 
                     
                     $temp = $wp_query; $wp_query= null;
-                    $wp_query = new WP_Query(); $wp_query->query('showposts=10' . '&paged='.$paged);
+                    $wp_query = new WP_Query(); $wp_query->query('showposts=20' . '&paged='.$paged);
                     $category = get_the_category();
                     while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
                         <?php 
@@ -31,7 +31,7 @@
                         
                     <?php endwhile; ?>
 
-                    <?php // wp_reset_postdata(); ?>
+                    <?php wp_reset_postdata(); ?>
 
                     </div>
             </div>

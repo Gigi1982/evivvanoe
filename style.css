@@ -6496,6 +6496,17 @@ html.fp-enabled,
     padding-top: 120px;
   }
 }
+.events-gallery-slider {
+  max-height: 600px;
+}
+.events-gallery-slider > li {
+  overflow: hidden;
+  max-height: 600px;
+}
+.events-gallery-slider > li > img {
+  margin: 0 auto;
+  text-align: center;
+}
 .news-listing {
   min-height: 100vh;
 }

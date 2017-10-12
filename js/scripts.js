@@ -38,10 +38,18 @@
             loop:true
         });
         
-        /*$('#fullpage').fullpage({
+        $('.events-gallery-slider').lightSlider({
+            adaptiveHeight:false,
+            item:1,
+            pager:false,
+            slideMargin:0,
+            loop:true
+        });
+        
+        $('#fullpage').fullpage({
             verticalCentered: false,
             anchors:['first', 'second', 'third' , 'fourth']
-        });*/
+        });
         
         $('.scroll-down').click(function(){
             $.fn.fullpage.moveSectionDown();

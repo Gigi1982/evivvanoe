@@ -33,20 +33,30 @@
             <h3 class="artist-subtitle theano"></h3> 
             <div id="lightgallery">
                 <div class="row">
+                    
+<!--
                     <?php 
-            
-                    $immaginiGenerali = get_field('gallery_generale');
-                    if ($immaginiGenerali) {
-                        foreach($immaginiGenerali as $immagineGenerale) {
-                            echo '<div class="col-md-6">
-                                    <a class="artist-single-images" href="'.$immagineGenerale['immagine_gallery_generale'].'">
-                                <img class="img-responsive" src="'.$immagineGenerale['immagine_gallery_generale'].'" />
-                                </a>
-                            </div>';
-                        }
-                    }
+                    //$immaginiGenerali = get_field('gallery_generale');
+                    //if ($immaginiGenerali) {
+                      //  echo '<ul class="events-gallery-slider">';
+                        //foreach($immaginiGenerali as $immagineGenerale) {
+                            //echo '<li class=""><img class="img-responsive" src="'.$immagineGenerale['immagine_gallery_generale'].'" /></li';
+                        //}
+                        //echo '</ul>';
+                    //}
                     ?>
+-->
+                    <?php if(have_rows('gallery_generale')): ?>
+                    <ul class="events-gallery-slider">
+                        <?php while (have_rows('gallery_generale')) : the_row(); ?>
+                            <li>
+                                <img class="img-responsive" src="<?php the_sub_field('immagine_gallery_generale'); ?>" />
+                            </li>
+                        <?php endwhile; ?>
+                    </ul>
+                    <?php endif; ?>
                 </div>
+                
             </div>
         </section>
         

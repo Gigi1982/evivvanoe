@@ -34,21 +34,15 @@ glyphicon glyphicon-arrow-left"></i> Tutti gli artisti</a></aside>
             <h2 class="subtitle"><span class="underlined">Gallery</span></h2>
             <h3 class="artist-subtitle theano"></h3> 
             <div id="lightgallery">
-                <div class="row">
-                    <?php 
-            
-                    $immagini = get_field('gallery');
-                    if ($immagini) {
-                        foreach($immagini as $immagine) {
-                            echo '<div class="col-md-6 img-container">
-                                    <a class="artist-single-images" href="'.$immagine['immagine_gallery'].'">
-                                <img class="img-responsive" src="'.$immagine['immagine_gallery'].'" />
-                                </a>
-                            </div>';
-                        }
-                    }
-                    ?>
-                </div>
+                <?php if(have_rows('gallery')): ?>
+                <ul class="events-gallery-slider">
+                    <?php while (have_rows('gallery')) : the_row(); ?>
+                        <li>
+                            <img class="img-responsive" src="<?php the_sub_field('immagine_gallery'); ?>" />
+                        </li>
+                    <?php endwhile; ?>
+                </ul>
+                <?php endif; ?>
             </div>
         </section>
         
