@@ -5069,12 +5069,11 @@ h6 {
   display: block;
   top: 50%;
   height: 32px;
-  background-image: url('img/controls.png');
   cursor: pointer;
   position: absolute;
   z-index: 99;
   margin-top: -16px;
-  opacity: 0.5;
+  opacity: 0.8;
   -webkit-transition: opacity 0.35s linear 0s;
   transition: opacity 0.35s linear 0s;
 }
@@ -5082,12 +5081,36 @@ h6 {
   opacity: 1;
 }
 .lSAction > .lSPrev {
-  background-position: 0 0;
   left: 10px;
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+}
+.lSAction > .lSPrev:before {
+  content: '\e806';
+  font-size: 30px;
 }
 .lSAction > .lSNext {
-  background-position: -32px 0;
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
   right: 10px;
+}
+.lSAction > .lSNext:before {
+  content: '\e801';
+  font-size: 30px;
 }
 .lSAction > a.disabled {
   pointer-events: none;
@@ -6569,7 +6592,7 @@ html.fp-enabled,
 }
 @font-face {
   font-family: 'fontello';
-  src: url('fonts/fontello.eot?51535650');
+  src: url('fonts/fontello.eot?78168017');
   src: url('fonts/fontello.eot?51535650#iefix') format('embedded-opentype'), url('fonts/fontello.woff2?51535650') format('woff2'), url('fonts/fontello.woff?51535650') format('woff'), url('fonts/fontello.ttf?51535650') format('truetype'), url('fonts/fontello.svg?51535650#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
@@ -6613,22 +6636,34 @@ html.fp-enabled,
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 .icon-facebook-square:before {
-  content: '\e800';
+  content: '\e802';
 }
-/* '' */
+/* '' */
 .icon-facebook-square.big,
 .icon-twitter-square.big {
   font-size: 40px;
 }
-.icon-instagram-square:before {
+.icon-youtube:before {
+  content: '\e800';
+}
+/* '' */
+.icon-right-open:before {
   content: '\e801';
 }
 /* '' */
-.icon-twitter-square:before {
-  content: '\e802';
-}
-/* '' */
-.icon-pinterest-square:before {
+.icon-instagram-square:before {
   content: '\e803';
 }
 /* '' */
+.icon-twitter-square:before {
+  content: '\e804';
+}
+/* '' */
+.icon-pinterest-square:before {
+  content: '\e805';
+}
+/* '' */
+.icon-left-open:before {
+  content: '\e806';
+}
+/* '' */

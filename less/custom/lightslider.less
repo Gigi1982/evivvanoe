@@ -157,12 +157,12 @@
     display: block;
     top: 50%;
     height: 32px;
-    background-image: url('img/controls.png');
+    //background-image: url('img/controls.png');
     cursor: pointer;
     position: absolute;
     z-index: 99;
     margin-top: -16px;
-    opacity: 0.5;
+    opacity: 0.8;
     -webkit-transition: opacity 0.35s linear 0s;
     transition: opacity 0.35s linear 0s;
 }
@@ -170,12 +170,41 @@
     opacity: 1;
 }
 .lSAction > .lSPrev {
-    background-position: 0 0;
+    //background-position: 0 0;
     left: 10px;
+    font-family: "fontello";
+      font-style: normal;
+      font-weight: normal;
+      speak: none;
+
+      display: inline-block;
+      text-decoration: inherit;
+      width: 1em;
+      margin-right: .2em;
+      text-align: center;
+    //.icon;
+    &:before {
+        content: '\e806';
+        font-size: 30px;
+    }
 }
 .lSAction > .lSNext {
-    background-position: -32px 0;
+    //background-position: -32px 0;
+    font-family: "fontello";
+      font-style: normal;
+      font-weight: normal;
+      speak: none;
+
+      display: inline-block;
+      text-decoration: inherit;
+      width: 1em;
+      margin-right: .2em;
+      text-align: center;
     right: 10px;
+    &:before {
+        content: '\e801';
+        font-size: 30px;
+    }
 }
 .lSAction > a.disabled {
     pointer-events: none;

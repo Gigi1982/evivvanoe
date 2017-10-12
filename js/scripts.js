@@ -42,6 +42,8 @@
             adaptiveHeight:false,
             item:1,
             pager:false,
+            auto:true,
+            pause:7000,
             slideMargin:0,
             loop:true
         });
