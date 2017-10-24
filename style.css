@@ -4224,10 +4224,38 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   width: 100vw;
   height: 100vh;
 }
+.event-caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.event-caption .icon {
+  opacity: 0;
+  position: relative;
+  left: -10px;
+  transition: all 400ms ease-in;
+  font-size: 20px;
+}
+.event-caption.dark {
+  color: #884a93;
+}
+.event-caption:hover {
+  text-decoration: underline !important;
+}
+.event-caption:hover .icon {
+  opacity: 1;
+  left: 0;
+}
+@media screen and (max-width: 1024px) {
+  .event-caption .icon {
+    opacity: 1;
+    left: 0;
+  }
+}
 .events-bg {
   background: url('img/inaugurazione.jpg');
   background-size: cover;
-  height: 100vh;
+  height: 450px;
   background-repeat: no-repeat;
   position: relative;
 }
@@ -4267,26 +4295,88 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
     background: rgba(0, 0, 0, 0.6);
   }
 }
+.section {
+  position: relative;
+}
+.section .home-slide-titles {
+  z-index: 2;
+  color: #884a93;
+  margin: 40px 0;
+  text-decoration: underline;
+}
+.section .home-buttons {
+  text-align: right;
+  margin: 20px 0;
+}
+.section .home-buttons > a {
+  background-color: transparent;
+  border: 2px solid #000000;
+  z-index: 1;
+  transition: border 200ms ease-in, color 200ms ease-in;
+  color: #000000;
+  padding: 6px 10px;
+  display: inline-block;
+  font-family: 'theano_modernregular';
+}
+.section .home-buttons:hover > a {
+  text-decoration: none;
+  border: 2px solid #884a93;
+  color: #884a93;
+}
 .video-showcase-text {
-  position: absolute;
-  bottom: 80px;
-  left: 50%;
-  transform: translateX(-50%);
+  padding-top: 100px;
+  padding-bottom: 40px;
   color: #fff;
 }
 .video-showcase-text h2 {
   margin-top: 0;
 }
-.news-home-listing .news-thumb {
+.video-bg-container:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(136, 74, 147, 0.7);
+}
+.home-news-listing {
+  z-index: 1;
+}
+.home-news-listing .news-thumb-container,
+.home-news-listing .news-bg {
+  min-height: 70vh;
+}
+.home-news-listing .news-bg {
+  background-size: cover;
+}
+.home-news-listing .news-thumb {
   display: block;
   position: relative;
   background-size: cover;
-  height: 100vh;
+  height: 70vh;
 }
-.news-home-listing .news-thumb .news-home-caption {
+.home-news-listing .news-thumb .news-home-caption {
   position: absolute;
   bottom: 80px;
   right: 100px;
+}
+.home-news-listing .eventi-listing-title {
+  color: #884a93;
+}
+.home-slide {
+  max-width: 960px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 960px) {
+  .home-slide {
+    max-width: 100%;
+    padding: 0 20px;
+  }
 }
 .artist-home-listing .artist-container {
   position: relative;
@@ -4319,7 +4409,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .artist-home-listing .artist-header {
   background-size: cover;
-  height: 100vh;
+  height: 70vh;
 }
 @media screen and (min-width: 1025px) {
   .artist-home-listing .artist-container:after {
@@ -4535,6 +4625,24 @@ h6 {
   .category {
     font-size: 22px;
   }
+}
+.homepage-content {
+  color: #fff;
+}
+.homepage-content h1 {
+  font-size: 36px;
+}
+.homepage-content h2 {
+  font-size: 32px;
+}
+.homepage-content h3 {
+  font-size: 28px;
+}
+.homepage-content h4 {
+  font-size: 22px;
+}
+.homepage-content a {
+  color: #fff;
 }
 .navbar-default {
   height: 100px;
@@ -4811,13 +4919,11 @@ h6 {
   position: absolute;
   background: #333333;
 }
-.home .footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  transition: opacity 200ms ease-in;
+.home .slide1-kaleido {
+  overflow: hidden;
+  min-height: 100vh;
+  max-width: 100%;
+  position: relative;
 }
 .footer {
   position: static;
@@ -6665,5 +6771,10 @@ html.fp-enabled,
 /* '' */
 .icon-left-open:before {
   content: '\e806';
+}
+/* '' */
+.icon-right-open:before {
+  content: '\e806';
+  transform: rotate(180deg);
 }
 /* '' */

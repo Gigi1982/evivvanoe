@@ -22,7 +22,7 @@
             ]
         });
         
-        $('.news-home-listing').lightSlider({
+        $('.home-news-listing').lightSlider({
             adaptiveHeight:false,
             item:1,
             pager:false,
