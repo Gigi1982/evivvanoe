@@ -4226,7 +4226,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .event-caption {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 .event-caption .icon {
@@ -4235,6 +4235,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   left: -10px;
   transition: all 400ms ease-in;
   font-size: 20px;
+  margin-left: 10px;
 }
 .event-caption.dark {
   color: #884a93;
@@ -4928,7 +4929,7 @@ h6 {
 .footer {
   position: static;
   background: #884a93;
-  height: 40px;
+  padding: 10px 0;
 }
 .footer .copyright {
   text-align: center;

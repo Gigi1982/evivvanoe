@@ -493,6 +493,41 @@ function create_post_type_html5()
             'category'
         ) // Add Category and Post Tags support
     ));
+    register_taxonomy_for_object_type('category', 'inventari'); // Register Taxonomies for Category
+    register_taxonomy_for_object_type('post_tag', 'inventari');
+    register_post_type('inventari', // Register Custom Post Type
+        array(
+        'labels' => array(
+            'name' => __('Inventari', 'inventari'), // Rename these to suit
+            'singular_name' => __('Inventario', 'inventario'),
+            'add_new' => __('Add New', 'inventari'),
+            'add_new_item' => __('Aggiungi nuovo inventario', 'inventari'),
+            'edit' => __('Edit', 'inventari'),
+            'edit_item' => __('Edit', 'inventari'),
+            'new_item' => __('New', 'inventari'),
+            'view' => __('View', 'inventari'),
+            'view_item' => __('View', 'inventari'),
+            'search_items' => __('Search', 'inventari'),
+            'not_found' => __('No Posts found', 'inventari'),
+            'not_found_in_trash' => __('No Posts found in Trash', 'inventari')
+        ),
+        'public' => true,
+        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+        'has_archive' => true,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'thumbnail'
+        ), // Go to Dashboard Custom HTML5 Blank post for supports
+        'can_export' => true, // Allows export in Tools > Export
+        'menu_position' => 5,
+        'menu_icon' => 'dashicons-admin-customizer',
+        'taxonomies' => array(
+            'post_tag',
+            'category'
+        ) // Add Category and Post Tags support
+    ));
 }
 
 /*------------------------------------*\
