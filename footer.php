@@ -1,5 +1,5 @@
 			<!-- footer -->
-			<footer style="height: 62px;" class="footer" role="contentinfo">
+			<footer class="footer" role="contentinfo">
 
 				<!-- copyright -->
 				<p style="margin:0;" class="copyright">

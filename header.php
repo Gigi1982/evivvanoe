@@ -33,6 +33,12 @@
 
 			<!-- header -->
 			<header class="header clear" role="banner">
+                
+                    <div class="banner">
+                        <div class="container">
+                            <div class="text-center banner-text">COME VISIT US @ PARATISSIMA 2017 - Stand 12 - Torino 1-5 novembre 2017 - Caserma La Marmora - Via Asti 22</div>
+                        </div>
+                    </div> 
 
 					<!-- nav -->
                     <nav class="navbar navbar-default navbar-fixed-top">
@@ -85,7 +91,7 @@
                       </div>
                         
                     </nav>
-                    
+                
                     <nav class="mobile-nav">
                         <ul class="list-unstyled">
                             <li><?php echo '<a href="'.$menu_items[0]->url.'">'?><?php echo $menu_items[0]->title;?></a></li> 

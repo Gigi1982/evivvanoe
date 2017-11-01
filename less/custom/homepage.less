@@ -83,6 +83,9 @@
             }
         }
     }
+    @media screen and (max-width:@screen-xs) {
+        height:150px;
+    }
 }
 
 .section {
@@ -125,11 +128,15 @@
 //    bottom:80px;
 //    left: 50%;
 //    transform: translateX(-50%);
-    padding-top: 100px;
+    //padding-top: 100px;
     padding-bottom: 40px;
     color: #fff;
     h2 {
         margin-top: 0;
+    }
+    @media screen and (max-width:@screen-sm) {
+        //padding-top: 50px;
+        padding-bottom: 20px;
     }
 }
 
@@ -180,6 +187,11 @@
     .eventi-listing-title {
         color:@brand-primary;
     }
+    @media screen and (max-width:@screen-xs) {
+        .news-thumb-container, .news-bg {
+            min-height: 60vh;
+        }
+    }
 }
 
 .home-slide {
@@ -192,6 +204,12 @@
     @media screen and (max-width:960px) {
         max-width: 100%;
         padding:0 20px;
+    }
+    @media screen and (max-width:@screen-xs) {
+        //margin-top: 74px;
+        h3 {
+            margin-top: 0;
+        }
     }
 }
 
@@ -250,7 +268,7 @@
 
 .embed-video-bg {
     position: absolute;
-    padding-top: 100px;
+    //padding-top: 100px;
     top: 50%;
     left: 50%;
     min-width: 100%;

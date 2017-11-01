@@ -4296,6 +4296,11 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
     background: rgba(0, 0, 0, 0.6);
   }
 }
+@media screen and (max-width: 480px) {
+  .events-bg {
+    height: 150px;
+  }
+}
 .section {
   position: relative;
 }
@@ -4325,12 +4330,16 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   color: #884a93;
 }
 .video-showcase-text {
-  padding-top: 100px;
   padding-bottom: 40px;
   color: #fff;
 }
 .video-showcase-text h2 {
   margin-top: 0;
+}
+@media screen and (max-width: 768px) {
+  .video-showcase-text {
+    padding-bottom: 20px;
+  }
 }
 .video-bg-container:after {
   content: "";
@@ -4365,6 +4374,12 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .home-news-listing .eventi-listing-title {
   color: #884a93;
 }
+@media screen and (max-width: 480px) {
+  .home-news-listing .news-thumb-container,
+  .home-news-listing .news-bg {
+    min-height: 60vh;
+  }
+}
 .home-slide {
   max-width: 960px;
   margin: 0 auto;
@@ -4377,6 +4392,11 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   .home-slide {
     max-width: 100%;
     padding: 0 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .home-slide h3 {
+    margin-top: 0;
   }
 }
 .artist-home-listing .artist-container {
@@ -4424,7 +4444,6 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .embed-video-bg {
   position: absolute;
-  padding-top: 100px;
   top: 50%;
   left: 50%;
   min-width: 100%;
@@ -4633,8 +4652,18 @@ h6 {
 .homepage-content h1 {
   font-size: 36px;
 }
+@media screen and (max-width: 768px) {
+  .homepage-content h1 {
+    font-size: 28px;
+  }
+}
 .homepage-content h2 {
   font-size: 32px;
+}
+@media screen and (max-width: 768px) {
+  .homepage-content h2 {
+    font-size: 24px;
+  }
 }
 .homepage-content h3 {
   font-size: 28px;
@@ -4703,6 +4732,11 @@ h6 {
 .chi-siamo-content.normal-page-content {
   padding-top: 128px;
 }
+@media screen and (max-width: 768px) {
+  .chi-siamo-content.normal-page-content {
+    padding-top: 78px;
+  }
+}
 .normal-page-content {
   padding-top: 100px;
   padding-bottom: 50px;
@@ -4738,7 +4772,7 @@ h6 {
 }
 @media screen and (max-width: 768px) {
   .normal-page-content {
-    padding-top: 78px;
+    padding-top: 0;
   }
   .normal-page-content .content-header {
     height: 370px;
@@ -6553,7 +6587,7 @@ html.fp-enabled,
 }
 @media screen and (max-width: 768px) {
   .artisti-single-content {
-    padding-top: 120px;
+    padding-top: 0px;
   }
   .artisti-single-content .single-artist-header {
     height: 370px;
@@ -6579,7 +6613,7 @@ html.fp-enabled,
   margin-right: 20px;
 }
 .eventi-single-content {
-  padding-top: 140px;
+  padding-top: 120px;
   padding-bottom: 100px;
 }
 .eventi-single-content .eventi-listing {
@@ -6623,7 +6657,7 @@ html.fp-enabled,
 }
 @media screen and (max-width: 768px) {
   .eventi-single-content {
-    padding-top: 120px;
+    padding-top: 0;
   }
 }
 .events-gallery-slider {
@@ -6779,3 +6813,47 @@ html.fp-enabled,
   transform: rotate(180deg);
 }
 /* '' */
+.banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 50px;
+  background-image: url('img/paratissima-bg.jpg');
+  background-size: cover;
+  z-index: 1;
+  color: #fff;
+}
+.banner .banner-text {
+  height: 50px;
+  font-size: 14px;
+  display: flex;
+  font-weight: 400;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 480px) {
+  .banner {
+    top: 80px;
+    height: 100px;
+  }
+  .banner .banner-text {
+    height: 100px;
+  }
+}
+.navbar-default {
+  top: 50px;
+}
+@media screen and (max-width: 480px) {
+  .navbar-default {
+    top: 0px;
+  }
+}
+.header.clear {
+  height: 150px;
+}
+@media screen and (max-width: 480px) {
+  .header.clear {
+    height: 180px;
+  }
+}
