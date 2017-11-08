@@ -17,8 +17,7 @@
                         ?>
                         <?php 
                             while (have_rows('galleria_inventario')) : the_row(); 
-                            $inventoryImages = get_field('galleria_inventario');
-                            echo count($inventoryImages);    
+                            $inventoryImages = get_field('galleria_inventario');    
                         ?>
                         <?php endwhile; ?>
                         <?php endif; ?>
@@ -26,6 +25,7 @@
                                 <a href="<?php the_permalink(); ?>">
                                     <header class="inventory-listing-item">
                                         <h1 class="inventory-listing-title"><?php the_title(); ?></h1>
+                                        <span><?php _e( 'Opere presenti in catalogo:', 'html5blank' ); ?> <?php echo count($inventoryImages); ?></span>
                                     </header>
                                 </a>
                             </div>
