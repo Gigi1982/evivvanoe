@@ -6819,6 +6819,7 @@ html.fp-enabled,
 }
 /* '' */
 .banner {
+  display: none;
   position: fixed;
   left: 0;
   right: 0;
@@ -6846,19 +6847,6 @@ html.fp-enabled,
     height: 100px;
   }
 }
-.navbar-default {
-  top: 50px;
-}
-@media screen and (max-width: 480px) {
-  .navbar-default {
-    top: 0px;
-  }
-}
-.header.clear {
-  height: 150px;
-}
-@media screen and (max-width: 480px) {
-  .header.clear {
-    height: 180px;
-  }
+.home main {
+  margin-top: 100px;
 }
