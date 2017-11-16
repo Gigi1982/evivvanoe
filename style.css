@@ -6853,3 +6853,33 @@ html.fp-enabled,
 .single-inventario {
   padding-top: 130px;
 }
+.single-inventario .inventario-slider .inventario-slider-single {
+  display: flex;
+}
+.inventory-bg {
+  min-height: 400px;
+  position: relative;
+}
+.inventory-bg .inventory-listing-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0);
+  opacity: 0;
+  transition: background 400ms ease-in, opacity 400ms ease-in;
+  padding: 20px;
+  text-align: center;
+  color: #333333;
+}
+.inventory-bg .inventory-listing-item .inventory-listing-title,
+.inventory-bg .inventory-listing-item .inventory-listing-subtitle {
+  white-space: nowrap;
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+}
+.inventory-bg:hover .inventory-listing-item {
+  background: rgba(255, 255, 255, 0.8);
+  opacity: 1;
+}

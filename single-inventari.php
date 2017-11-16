@@ -5,9 +5,9 @@
     <div class="container">
         <h1><?php the_title(); ?></h1>
         <?php if(have_rows('galleria_inventario')): ?>
-            <div class="row">
+            <ul class="inventario-slider">
                 <?php while (have_rows('galleria_inventario')) : the_row(); ?>
-                <div class="col-md-6">
+                <li class="inventario-slider-single">
                     <div class="inventario-item">
                         <header class="inventario-heading">
                             <img class="img-responsive" src="<?php the_sub_field('immagine_opera'); ?>" />
@@ -28,10 +28,12 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </li>
                 <?php endwhile; ?>
-            </div>
+            </ul>
         <?php endif; ?>
 
     </div>
 </section>
+
+<?php get_footer(); ?>
